@@ -5,6 +5,14 @@ pipeline {
         nodejs 'nodejs-20'
     }
 
+    stage('Verify Node Version') {
+    steps {
+        sh 'node -v'
+        sh 'npm -v'
+    }
+}
+
+
     stages {
 
         stage('Checkout Source Code') {
